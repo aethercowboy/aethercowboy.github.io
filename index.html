@@ -6,13 +6,12 @@
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/foundation/6.1.0/foundation.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-		<script src="/script/jscomApp.js"></script>
 	</head>
 	
 	<body>
 	
 		<div class="title-bar" id="medium-title">
-			<div class="title-bar-title">Jacob Silvia</div>
+			<div class="title-bar-title"><a href="#" ng-click="template='home'">Jacob Silvia</a></div>
 			<div class="title-bar-left">
 				
 			</div>
@@ -28,22 +27,75 @@
 			</div>
 		</div>
 		
-		<ng-include src="template"></ng-include>
+		<ng-include src="template" ng-init="template='home'"></ng-include>
 	</body>
 	
 	<script type="text/javascript">
 		$(document).foundation();
 	</script>
 	
+	<script type="text/ng-template" id="home">
+		<div class="row">
+			<div class="columns small-12">
+			</div>
+		</div>
+	</script>
+	
 	<script type="text/ng-template" id="developer">
-		<h1>Developer<h1>
+	<div class="row">
+		<div class="columns small-12">
+		<h1>Developer</h1>
+		<p>I have developed or contributed significantly to the following projects.</p>
+		<h2>Websites</h2>
+		<div class="row">
+			<div class="columns small-6 medium-3 end">
+				<div class="media-object">
+					<div class="media-object-section">
+						<img src="images/cedar-logo.png" alt="Cedar Consulting Logo" style="width: 32px; height: 32px;"/>
+					</div>
+					<div class="media-object-section">
+						Cedar Consulting (<a href="http://cedarconsulting.net" target="_blank">cedarconsulting.net</a>)
+					</div>
+				</div>
+			</div>
+			<div class="columns small-6 medium-3 end">
+				<div class="media-object">
+					<div class="media-object-section">
+						<img src="images/fergus-logo.png" alt="Cedar Consulting Logo" style="width: 32px; height: 32px;"/>
+					</div>
+					<div class="media-object-section">
+						Fergus Reinsurance (<a href="http://fergus.bm" target="_blank">fergus.bm</a>)
+					</div>
+				</div>
+			</div>
+			<div class="columns small-6 medium-3 end">
+				<div class="media-object">
+					<div class="media-object-section">
+						<img src="images/whatcharacter-logo.png" alt="Cedar Consulting Logo" style="width: 32px; height: 32px;"/>
+					</div>
+					<div class="media-object-section">
+						WhatCharacter (<a href="http://whatcharacter.com" target="_blank">whatcharacter.com</a>)
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
 	</script>
 	
 	<script type="text/ng-template" id="writer">
+	<div class="row">
+		<div class="columns small-12">
 		<h1>Writer<h1>
+		</div>
+	</div>
 	</script>
 	
 	<script type="text/ng-template" id="reader">
+	<div class="row">
+		<div class="columns small-12">
 		<h1>Reader<h1>
+		</div>
+		</div>
 	</script>
 </html>
