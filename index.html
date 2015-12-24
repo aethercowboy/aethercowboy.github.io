@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 	<head>
 		<title>Jacob Silvia</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.1.0/foundation.min.css">
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/foundation/6.1.0/foundation.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="/script/jscomApp.js"></script>
 	</head>
 	
 	<body>
@@ -19,15 +21,29 @@
 					<button class="menu-icon" type="button" data-toggle></button>
 				</div>
 				<ul class="dropdown menu vertical medium-horizontal" id="top-menu-buttons" data-responsive-menu="dropdown small-accordion">
-					<li><a href="#" class="hollow expanded button">Developer</a></li>
-					<li><a href="#" class="hollow success button">Writer</a></li>
-					<li><a href="#" class="hollow alert button">Reader</a></li>
+					<li><a href="#" class="hollow button" ng-click="template='developer'">Developer</a></li>
+					<li><a href="#" class="hollow success button" ng-click="template='writer'">Writer</a></li>
+					<li><a href="#" class="hollow alert button" ng-click="template='reader'">Reader</a></li>
 				</ul>
 			</div>
 		</div>
+		
+		<ng-include src="template"></ng-include>
 	</body>
 	
 	<script type="text/javascript">
 		$(document).foundation();
+	</script>
+	
+	<script type="text/ng-template" id="developer">
+		<h1>Developer<h1>
+	</script>
+	
+	<script type="text/ng-template" id="writer">
+		<h1>Writer<h1>
+	</script>
+	
+	<script type="text/ng-template" id="reader">
+		<h1>Reader<h1>
 	</script>
 </html>
