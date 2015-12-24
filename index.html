@@ -2,10 +2,32 @@
 <html>
 	<head>
 		<title>Jacob Silvia</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.1.0/foundation.min.css">
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/foundation/6.1.0/foundation.min.js"></script>
 	</head>
 	
 	<body>
-		<h1>Jacob Silvia</h1>
-		<p>This page coming soon.</p>
+	
+		<div class="title-bar" id="medium-title">
+			<div class="title-bar-title">Jacob Silvia</div>
+			<div class="title-bar-left">
+				
+			</div>
+			<div class="title-bar-right">
+				<div data-responsive-toggle="top-menu-buttons" data-hide-for="medium">
+					<button class="menu-icon" type="button" data-toggle></button>
+				</div>
+				<ul class="dropdown menu vertical medium-horizontal" id="top-menu-buttons" data-responsive-menu="dropdown small-accordion">
+					<li><a href="#" class="hollow expanded button">Developer</a></li>
+					<li><a href="#" class="hollow success button">Writer</a></li>
+					<li><a href="#" class="hollow alert button">Reader</a></li>
+				</ul>
+			</div>
+		</div>
 	</body>
+	
+	<script type="text/javascript">
+		$(document).foundation();
+	</script>
 </html>
