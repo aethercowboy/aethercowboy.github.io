@@ -4,15 +4,15 @@
 		<title>Jacob Silvia</title>
 		<link rel="icon" type="image/png" href="images/logo.png">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.1.0/foundation.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/foundation/6.1.0/foundation.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 		<style type="text/css">
 			.media-object {
 				min-height: 60px;
 			}
-			
+
 			h1 {
 				background-color: #555555;
 				color: white;
@@ -21,38 +21,46 @@
 				background-color: #999999;
 				color: white;
 			}
-			
+
 			img {
 				width: 32px;
 			}
-			
+
 			body {
 				display: flex;
 				min-height: 100vh;
 				flex-direction: column;
 			}
-			
+
 			.content {
 				flex: 1;
 			}
-			
+
 			footer {
 				background: #0a0a0a;
 				color: white;
 			}
-			
+
 			.title-bar-title {
 				font-size: 1.5em;
 			}
+
+			.title-bar {
+				transform: rotate(1deg) translate(0, 10px);
+				padding-top: 2em;
+				margin-top: -1.5em;
+				background-color: black;
+			}
+
 		</style>
 	</head>
-	
+
 	<body>
-	
+
 		<div class="title-bar" id="medium-title">
 			<div class="title-bar-title"><a href="#" ng-click="template='home'">Jacob Silvia</a></div>
 			<div class="title-bar-left">
-				
+
 			</div>
 			<div class="title-bar-right">
 				<div data-responsive-toggle="top-menu-buttons" data-hide-for="medium">
@@ -65,29 +73,29 @@
 				</ul>
 			</div>
 		</div>
-		
+
 		<div class="content">
 		<ng-include src="template" ng-init="template='home'"></ng-include>
 		</div>
-		
+
 		<footer class="text-center"><small>&copy; 2016 Jacob P. Silvia. All Rights Reserved.</small></footer>
 	</body>
-	
+
 	<script type="text/javascript">
 		$(document).foundation();
 	</script>
-	
+
 	<script type="text/ng-template" id="home">
 		<div class="row">
 			<div class="columns small-12">
 				<h1>Contact</h1>
 				<ul class="fa-ul">
-					<li><i class="fa-li fa fa-envelope-o"></i><a href="mailto:jacob.silvia@gmail.com">jacob.silvia@gmail.com</a>
+					<li><i class="fa-li fa fa-envelope"></i><a href="mailto:jacob.silvia@gmail.com">jacob.silvia@gmail.com</a>
 				</ul>
 			</div>
 		</div>
 	</script>
-	
+
 	<script type="text/ng-template" id="developer">
 	<div class="row">
 		<div class="columns small-12">
@@ -200,16 +208,26 @@
 		</div>
 	</div>
 	</script>
-	
+
 	<script type="text/ng-template" id="writer">
 		<div class="row">
 			<div class="columns small-12">
 				<h1>Writer</h1>
-				
+
 				<div class="row">
 					<div class="columns small-12 medium-6 end">
 						<h2>Fiction</h2>
 						<div class="row">
+							<div class="columns small-12 medium-6 end">
+								<div class="media-object">
+									<div class="media-object-section"><img/></div>
+									<div class="media-object-section">
+										<a href="https://contradictite.blogspot.com/">The Contradictite</a>
+										<br/>(my writing blog)
+									</div>
+								</div>
+							</div>
+
 							<div class="columns small-12 medium-6 end">
 								<div class="media-object">
 									<div class="media-object-section"><img/></div>
@@ -237,7 +255,7 @@
 						</div>
 					</div>
 				</div>
-			
+
 				<div class="row">
 					<div class="columns small-12">
 						<h2>NaNoWriMo <small>(<a href="http://nanowrimo.org">nanowrimo.org</a>)</small></h2>
@@ -246,10 +264,20 @@
 								<div class="media-object">
 									<div class="media-object-section"><img/></div>
 									<div class="media-object-section">
+										<a href="https://docs.google.com/document/d/1Hts38dkEHeUw7KujwmU4ffxeg4bY7f-VjseGp0CaZKs/edit?usp=sharing" target="_blank"><i class="fa fa-book"></i></a> <em>SU:CCG:ORPG</em> (2017)
+									</div>
+								</div>
+							</div>
+
+							<div class="columns small-6 medium-3 end">
+								<div class="media-object">
+									<div class="media-object-section"><img/></div>
+									<div class="media-object-section">
 										<a href="https://docs.google.com/document/d/1ggcl7ebijRm5JGuBIjC7s7zK-CfYiEfHrEnBZ_lY79o/edit?usp=sharing" target="_blank"><i class="fa fa-book"></i></a> <em>Over One Million Unicorns</em> (2016)
 									</div>
 								</div>
 							</div>
+
 							<div class="columns small-6 medium-3 end">
 								<div class="media-object">
 									<div class="media-object-section"><img/></div>
@@ -336,14 +364,14 @@
 			</div>
 		</div>
 	</script>
-	
+
 	<script type="text/ng-template" id="reader">
 		<div class="row">
 			<div class="columns small-12">
 				<h1>Reader</h1>
 				<p>If you would like for me to review your book, you may contact me using the email address on this site. I will give your book an honest review and post it on <a href="http://www.amazon.com/gp/pdp/profile/A3SNR60JA7R0OH">Amazon.com</a>, <a href="https://www.librarything.com/profile_reviews.php?view=aethercowboy" target="_blank">LibraryThing</a>, my personal <a href="http://jacobsilvia.blogspot.com/search/label/book%20reviews" target="_blank">blog</a>, and other sites for user reviews as appropriate. On sending me a copy of your book, you agree that I have all the consumer rights provided under the "<a href="https://en.wikipedia.org/wiki/First-sale_doctrine" target="_blank">First-Sale Doctrine</a>" under US Copyright law.
 			</div>
-		
+
 		</div>
 	</script>
 </html>
